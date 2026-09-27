@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --regal-navy: #134074;
+  --oxford-navy: #13315C;
+  --prussian-blue: #0B2545;
+  --powder-blue: #8DA9C4;
+  --mint-cream: #EEF4ED;
+  
+  --semantic-success: #22C55E;
+  --semantic-warning: #F59E0B;
+  --semantic-error: #EF4444;
+  --semantic-info: #3B82F6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0B2545;
+  background-color: #EEF4ED;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Modal Overlay backdrop */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 37, 69, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nav Link Underline Hover Effect */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #134074;
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
